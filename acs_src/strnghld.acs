@@ -1,4 +1,4 @@
-#library "strnghld"
+#library "strnghld.acs"
 #include "zcommon.acs"
 
 /* ******************************* **
