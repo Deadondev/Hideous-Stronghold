@@ -1085,6 +1085,16 @@ function void WaveEnemy (int wave, str actor, int num)
 	EnemyEntries[EnemyEntriesUsed++][2]	= num;
 }
 
+function void WaveSupport (int wave, str actor, int num) //These enemies keep spawning every 30 seconds to keep pressure & provide ammo -[Cozi]
+{
+	if(EnemyEntriesUsed==MAX_ENEMY_ENTRIES)
+	{	PrintBold(s:"Error: EnemyEntries[] limit hit");	}
+
+	EnemyEntries[EnemyEntriesUsed][0]	= wave;
+	EnemyEntries[EnemyEntriesUsed][1]	= actor;
+	//EnemyEntries[EnemyEntriesUsed++][2]	= num; There's supposed to be infinite so...
+}
+
 function void ClearWaveEnemies (void)
 {
 	EnemyEntriesUsed	= 0;
